@@ -12,7 +12,7 @@ jobs:
         with:
           token: ${{ secrets.PAT_TOKEN }}
           # optionally define rep (default is calling repo)
-          repo: 'CanarysPlayground/githubAdvancedSecurity'
+          repo: 'Sanketdesai305/loginsystem'
         env:
           org: "Sanketdesai305"
 
