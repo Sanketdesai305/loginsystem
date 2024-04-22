@@ -1,0 +1,22 @@
+name: Gather data for Flat Data
+on:
+  push:
+    branches:
+      - main
+jobs:
+  data_gathering:
+    runs-on: ubuntu-latest
+    steps:
+      - # Generate issues and save results
+        uses: SanketPlayground/myAdvancedSecurityOrgLevel@main
+        with:
+          token: ${{ secrets.APT_TOKEN }}
+          # optionally define rep (default is calling repo)
+          repo: 'CanarysPlayground/githubAdvancedSecurity'
+        env:
+          org: "CanarysPlayground"
+
+      - uses: actions/upload-artifact@v3.0.0
+        with:
+          name: results
+          path: alerts.xlsx
