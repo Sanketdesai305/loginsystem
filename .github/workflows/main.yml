@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - # Generate issues and save results
-        uses: SanketPlayground/myAdvancedSecurityOrgLevel@main
+        uses: zbazztian/ghas-reports-action@main
         with:
           token: ${{ secrets.PAT_TOKEN }}
           # optionally define rep (default is calling repo)
